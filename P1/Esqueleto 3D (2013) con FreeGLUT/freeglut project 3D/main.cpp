@@ -27,13 +27,14 @@ GLdouble lookX=0.0, lookY=0.0, lookZ=0.0;
 GLdouble upX=0, upY=1, upZ=0;
 
 // Scene variables
-GLfloat angX, angY, angZ; 
+GLfloat angX, angY, angZ, rotRuedas; 
 
 void buildSceneObjects() {	 
     angX=0.0f;
     angY=0.0f;
     angZ=0.0f;	
 
+	rotRuedas = 0.0f;
 	obj = gluNewQuadric();
 }
 
@@ -137,22 +138,81 @@ void dibujaCoche(){
 
 	glPushMatrix();
 
+	glTranslatef(rotRuedas/20, 0.0f, 0.0f);
+	glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
+	glPushMatrix();
+
+	glColor3d(255, 0, 255);
 	glutSolidCube(2);
 	
 
 	//FARO DERECHA
-	glScalef(0.4f, 0.4f, 0.4f);
+	glScalef(0.3f, 0.3f, 0.4f);
 	glTranslatef(1.5f, 0.0f, 2.5f);
+	glColor3d(0, 255, 0);
 	gluCylinder(obj, 1, 1, 1, 30, 30);
 	glTranslatef(-1.5f, 0.0f, -2.5f);
 
 	//FARO IZQUIERDA
 	glTranslatef(-1.5f, 0.0f, 2.5f);
+	glColor3d(0, 255, 0);
 	gluCylinder(obj, 1, 1, 1, 30, 30);
 	glTranslatef(1.5f, 0.0f, -2.5f);
+	
+	glPopMatrix();
 
-	//RUEDAS
 
+	//RUEDAS (REF. COCHE MIRANDO EN VISTA FRONTAL)
+	
+	glPushMatrix();
+	
+	glScalef(0.5f, 0.5f, 0.5f);
+	glColor3d(0, 0, 0);
+
+	//IZQ FRONTAL
+	glTranslatef(-3.0f, -1.5f, 1.3f);
+	glRotatef(rotRuedas, 1.0f, 0.0f, 0.0f);
+	glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
+	gluCylinder(obj, 1, 1, 1, 30, 30);
+	gluDisk(obj, 0, 1, 30, 30);
+	glRotatef(-90.0f, 0.0f, 1.0f, 0.0f);
+	glRotatef(-rotRuedas, 1.0f, 0.0f, 0.0f);
+	glTranslatef(3.0f, 1.5f, -1.3f);
+	
+	//DER FRONTAL
+	glTranslatef(3.0f, -1.5f, 1.3f);
+	glRotatef(rotRuedas, 1.0f, 0.0f, 0.0f);
+	glRotatef(-90.0f, 0.0f, 1.0f, 0.0f);
+	gluCylinder(obj, 1, 1, 1, 30, 30);
+	gluDisk(obj, 0, 1, 30, 30);
+	//glutSolidCube(1);	TESTING
+	glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
+	glRotatef(-rotRuedas, 1.0f, 0.0f, 0.0f);
+	glTranslatef(-3.0f, 1.5f, -1.3f);
+
+	//DER TRASERO
+	glTranslatef(3.0f, -1.5f, -1.3f);
+	glRotatef(rotRuedas, 1.0f, 0.0f, 0.0f);
+	glRotatef(-90.0f, 0.0f, 1.0f, 0.0f);
+	gluCylinder(obj, 1, 1, 1, 30, 30);
+	gluDisk(obj, 0, 1, 30, 30);
+	glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
+	glRotatef(-rotRuedas, 1.0f, 0.0f, 0.0f);
+	glTranslatef(-3.0f, 1.5f, 1.3f);
+
+	//IZQ TRASERO
+	glTranslatef(-3.0f, -1.5f, -1.3f);
+	glRotatef(rotRuedas, 1.0f, 0.0f, 0.0f);
+	glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
+	gluCylinder(obj, 1, 1, 1, 30, 30);
+	gluDisk(obj, 0, 1, 30, 30);
+	glRotatef(-90.0f, 0.0f, 1.0f, 0.0f);
+	glRotatef(-rotRuedas, 1.0f, 0.0f, 0.0f);
+	glTranslatef(3.0f, 1.5f, 1.3f);
+
+	glPopMatrix();
+
+	
 
 	glPopMatrix();
 }
@@ -235,7 +295,9 @@ void key(unsigned char key, int x, int y){
 		case 's': angY=angY+5; break;
 		case 'x': angY=angY-5; break;
 		case 'd': angZ=angZ+5; break;
-		case 'c': angZ=angZ-5; break;  		 
+		case 'c': angZ=angZ-5; break;  
+		case 'f': rotRuedas+= 5; break;
+		case 'v': rotRuedas-= 5; break;
 		default:
 			need_redisplay = false;
 			break;
