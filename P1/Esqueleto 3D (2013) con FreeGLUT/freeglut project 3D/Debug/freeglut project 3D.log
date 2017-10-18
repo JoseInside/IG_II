@@ -1,13 +1,14 @@
-﻿Build started 13/10/2017 13:46:33.
-     1>Project "C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\freeglut project 3D\freeglut project 3D.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\software\programacion\MSVStudio2013\VC\bin\CL.exe /c /I"C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
-       Link:
-         C:\software\programacion\MSVStudio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\Debug\freeglut project 3D.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\freeglut\lib\\" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\Debug\freeglut project 3D.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\Debug\freeglut project 3D.lib" /MACHINE:X86 Debug\main.obj
-         freeglut project 3D.vcxproj -> C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\Debug\freeglut project 3D.exe
-     1>Done Building Project "C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\freeglut project 3D\freeglut project 3D.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.82
+﻿  ObjetoCompuesto.cpp
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\objetocompuesto.cpp(22): error C3867: 'TAfin::getM': non-standard syntax; use '&' to create a pointer to member
+  Malla.cpp
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\malla.cpp(37): error C2065: 'cara': undeclared identifier
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\malla.cpp(37): error C2227: left of '->getNumeroVertices' must point to class/struct/union/generic type
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\malla.cpp(39): error C2065: 'cara': undeclared identifier
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\malla.cpp(39): error C2227: left of '->getIndiceNormal' must point to class/struct/union/generic type
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\malla.cpp(40): error C2065: 'cara': undeclared identifier
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\malla.cpp(40): error C2227: left of '->getIndiceVertice' must point to class/struct/union/generic type
+  Coche.cpp
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\coche.cpp(11): error C2061: syntax error: identifier 'Rueda'
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\coche.cpp(15): error C2039: 'rota': is not a member of 'Objeto3D'
+  c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\objeto3d.h(5): note: see declaration of 'Objeto3D'
+  Generating Code...

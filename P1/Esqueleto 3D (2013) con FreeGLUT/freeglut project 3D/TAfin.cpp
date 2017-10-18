@@ -14,6 +14,7 @@ TAfin::TAfin()
 TAfin::~TAfin()
 {
 }
+
 void TAfin::postmultiplica(GLfloat* m1){
 	glMatrixMode(GL_MODELVIEW);
 	glPushMatrix();
@@ -25,6 +26,7 @@ void TAfin::postmultiplica(GLfloat* m1){
 	glGetFloatv(GL_MODELVIEW_MATRIX, m);
 	glPopMatrix();
 }
+
 void TAfin::traslada(PV3D* v) {
 
 	glMatrixMode(GL_MODELVIEW);
@@ -32,6 +34,18 @@ void TAfin::traslada(PV3D* v) {
 	glLoadIdentity();
 	glTranslatef(v->getX(),v->getY(), v->getZ());
 	GLfloat* m1 = new GLfloat[16];
+	glGetFloatv(GL_MODELVIEW_MATRIX, m1);
+	glPopMatrix();
+	TAfin::postmultiplica(m1);
+}
+
+void TAfin::rota(PV3D* v, GLdouble angulo)
+{
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+	glLoadIdentity();
+	glRotatef(angulo, v->getX(), v->getY(), v->getZ());
+	GLfloat m1[16];
 	glGetFloatv(GL_MODELVIEW_MATRIX, m1);
 	glPopMatrix();
 	TAfin::postmultiplica(m1);

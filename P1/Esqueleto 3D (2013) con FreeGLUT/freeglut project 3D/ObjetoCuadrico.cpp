@@ -3,6 +3,7 @@
 
 ObjetoCuadrico::ObjetoCuadrico()
 {
+	obj = gluNewQuadric();
 }
 
 

@@ -11,6 +11,7 @@ public:
 
 	void traslada(PV3D* v);
 	void postmultiplica(GLfloat* m1);
+	void rota(PV3D* v, GLdouble angulo);
 	GLfloat getM() { return *m; }
 };
 

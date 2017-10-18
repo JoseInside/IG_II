@@ -57,6 +57,15 @@
     <ClCompile Include="Cubo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Rueda.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Cara.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VerticeNormal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TAfin.h">
@@ -96,6 +105,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Cubo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Rueda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Cara.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VerticeNormal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

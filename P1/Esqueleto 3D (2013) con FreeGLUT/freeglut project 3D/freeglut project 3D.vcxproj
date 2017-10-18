@@ -13,14 +13,14 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7B0BFFD4-F43D-4F20-B1CE-F95EB35AB0A4}</ProjectGuid>
     <RootNamespace>freeglutproject3D</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -68,6 +68,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arbol.cpp" />
+    <ClCompile Include="Cara.cpp" />
     <ClCompile Include="Cilindro.cpp" />
     <ClCompile Include="Coche.cpp" />
     <ClCompile Include="Cubo.cpp" />
@@ -80,10 +81,13 @@
     <ClCompile Include="ObjetoCompuesto.cpp" />
     <ClCompile Include="ObjetoCuadrico.cpp" />
     <ClCompile Include="PV3D.cpp" />
+    <ClCompile Include="Rueda.cpp" />
     <ClCompile Include="TAfin.cpp" />
+    <ClCompile Include="VerticeNormal.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arbol.h" />
+    <ClInclude Include="Cara.h" />
     <ClInclude Include="Cilindro.h" />
     <ClInclude Include="Coche.h" />
     <ClInclude Include="Cubo.h" />
@@ -95,7 +99,9 @@
     <ClInclude Include="ObjetoCompuesto.h" />
     <ClInclude Include="ObjetoCuadrico.h" />
     <ClInclude Include="PV3D.h" />
+    <ClInclude Include="Rueda.h" />
     <ClInclude Include="TAfin.h" />
+    <ClInclude Include="VerticeNormal.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
