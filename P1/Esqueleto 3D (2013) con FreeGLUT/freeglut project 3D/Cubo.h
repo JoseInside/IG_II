@@ -1,9 +1,13 @@
 #pragma once
-#include "ObjetoCuadrico.h"
-class Cubo
+#include "Objeto3D.h"
+class Cubo: public Objeto3D
 {
+private:
+	GLfloat _a;
 public:
-	Cubo();
+	Cubo(GLfloat a);
 	~Cubo();
+
+	void dibuja();
 };
 

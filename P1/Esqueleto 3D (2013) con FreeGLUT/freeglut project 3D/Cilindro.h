@@ -1,6 +1,6 @@
 #pragma once
 #include "ObjetoCuadrico.h"
-class Cilindro: ObjetoCuadrico
+class Cilindro: public ObjetoCuadrico
 {
 private:
 	GLfloat _rtop, _rbase, _h;

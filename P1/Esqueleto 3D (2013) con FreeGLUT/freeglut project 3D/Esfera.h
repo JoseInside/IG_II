@@ -1,9 +1,14 @@
 #pragma once
 #include "ObjetoCuadrico.h"
-class Esfera
+class Esfera : public ObjetoCuadrico
 {
+private:
+	GLUquadric* _e;
+	GLfloat _r;
 public:
-	Esfera();
+	Esfera(GLUquadric* e, GLfloat r);
 	~Esfera();
+
+	void dibuja();
 };
 

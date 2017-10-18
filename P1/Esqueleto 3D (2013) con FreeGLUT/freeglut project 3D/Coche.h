@@ -1,6 +1,6 @@
 #pragma once
 #include "ObjetoCompuesto.h"
-class Coche
+class Coche: public ObjetoCompuesto
 {
 public:
 	Coche();

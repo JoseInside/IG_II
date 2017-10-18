@@ -1,12 +1,20 @@
 #pragma once
 #include "ObjetoCompuesto.h"
-class Arbol
+#include "ObjetoCuadrico.h"
+#include "Esfera.h"
+#include "Cilindro.h"
+
+class Arbol: public ObjetoCompuesto
 {
 public:
-	Arbol();
+	enum tipo { ABETO, ROBLE, PINO, ALAMO };
+
+	Arbol(tipo t);
 	~Arbol();
 
-	enum tipo { ABETO, ROBLE, PINO, ALAMO };
-	void dibuja(enum tipo);
+	void dibuja();
+
+private:
+	tipo _t;
 };
 

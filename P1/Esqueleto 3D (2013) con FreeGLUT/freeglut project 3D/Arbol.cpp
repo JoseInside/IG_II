@@ -1,9 +1,9 @@
 #include "Arbol.h"
 
 
-Arbol::Arbol()
+Arbol::Arbol(tipo t)
 {
-	
+	_t = t;
 		
 }
 
@@ -11,10 +11,10 @@ Arbol::Arbol()
 Arbol::~Arbol()
 {
 }
-void Arbol::dibuja(enum tipo){
+void Arbol::dibuja(){
 
 	
-	switch (tipo) {
+	switch (_t) {
 	case ABETO:
 		break;
 	case ROBLE:
