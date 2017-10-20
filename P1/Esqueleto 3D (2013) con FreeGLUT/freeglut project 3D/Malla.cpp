@@ -1,13 +1,13 @@
 #include "Malla.h"
 
-
-Malla::Malla(int nV, int nN, int nC, PV3D** v, PV3D** n)
+Malla::Malla(int nV, int nN, int nC, PV3D** v, PV3D** n, Cara** c)
 {
 	numVertices = nV;
 	numNormales = nN;
 	numCaras = nC;
 	vertice = v;
 	normal = n;
+	cara = c;
 	
 }
 

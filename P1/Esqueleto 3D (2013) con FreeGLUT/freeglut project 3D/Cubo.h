@@ -2,12 +2,15 @@
 #include "Objeto3D.h"
 class Cubo: public Objeto3D
 {
-private:
-	GLfloat _a;
+
 public:
-	Cubo(GLfloat a);
+	//Pasamos el tamaño del cubo como parámetro para construirlo
+	Cubo(GLfloat tam);
 	~Cubo();
 
 	void dibuja();
+
+private:
+	GLfloat _tam;
 };
 

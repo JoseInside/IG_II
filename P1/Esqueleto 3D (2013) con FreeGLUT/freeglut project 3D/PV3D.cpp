@@ -1,7 +1,7 @@
 #include "PV3D.h"
 
 
-PV3D::PV3D(GLfloat x, GLdouble y, GLfloat z, int pv)
+PV3D::PV3D(GLfloat x, GLfloat y, GLfloat z, int pv)
 {
 	this->pv = pv;
 	this->x = x;

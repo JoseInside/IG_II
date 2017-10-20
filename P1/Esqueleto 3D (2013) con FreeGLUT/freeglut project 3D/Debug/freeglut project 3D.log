@@ -1,14 +1,9 @@
-﻿  ObjetoCompuesto.cpp
-c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\objetocompuesto.cpp(22): error C3867: 'TAfin::getM': non-standard syntax; use '&' to create a pointer to member
-  Malla.cpp
-c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\malla.cpp(37): error C2065: 'cara': undeclared identifier
-c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\malla.cpp(37): error C2227: left of '->getNumeroVertices' must point to class/struct/union/generic type
-c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\malla.cpp(39): error C2065: 'cara': undeclared identifier
-c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\malla.cpp(39): error C2227: left of '->getIndiceNormal' must point to class/struct/union/generic type
-c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\malla.cpp(40): error C2065: 'cara': undeclared identifier
-c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\malla.cpp(40): error C2227: left of '->getIndiceVertice' must point to class/struct/union/generic type
-  Coche.cpp
-c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\coche.cpp(11): error C2061: syntax error: identifier 'Rueda'
-c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\coche.cpp(15): error C2039: 'rota': is not a member of 'Objeto3D'
-  c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\objeto3d.h(5): note: see declaration of 'Objeto3D'
-  Generating Code...
+﻿Build started 20/10/2017 13:53:01.
+     1>Project "C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\freeglut project 3D\freeglut project 3D.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         freeglut project 3D.vcxproj -> C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\Debug\freeglut project 3D.exe
+     1>Done Building Project "C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\freeglut project 3D\freeglut project 3D.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.04

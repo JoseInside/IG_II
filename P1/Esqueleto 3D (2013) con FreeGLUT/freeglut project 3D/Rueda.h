@@ -1,7 +1,8 @@
 #pragma once
-#include "ObjetoCuadrico.h"
+#include "ObjetoCompuesto.h"
 
-class Rueda : public ObjetoCuadrico
+//COMPUESTO: CILINDRO + DISCO
+class Rueda : public ObjetoCompuesto
 {
 public:
 	Rueda();

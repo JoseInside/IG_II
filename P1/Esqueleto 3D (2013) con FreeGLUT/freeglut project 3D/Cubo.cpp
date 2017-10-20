@@ -1,9 +1,9 @@
 #include "Cubo.h"
 
 
-Cubo::Cubo(GLfloat a)
+Cubo::Cubo(GLfloat tam)
 {
-	_a = a;
+	_tam = tam;
 }
 
 
@@ -12,7 +12,7 @@ Cubo::~Cubo()
 }
 void Cubo::dibuja(){
 
-	glutSolidCube(_a);
-	glutWireCube(_a);
+	glutSolidCube(_tam);
+	glutWireCube(_tam);
 
 }

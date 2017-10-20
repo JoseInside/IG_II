@@ -1,12 +1,13 @@
 #include "Cilindro.h"
 
 
-Cilindro::Cilindro(GLUquadric* c, GLfloat rtop, GLfloat rbase, GLfloat h)
+Cilindro::Cilindro(GLfloat rtop, GLfloat rbase, GLfloat h, GLfloat sli, GLfloat sta)
 {
-	_c = c;
 	_rtop = rtop;
 	_rbase = rbase;
 	_h = h;
+	_sli = sli;
+	_sta = sta;
 }
 
 
@@ -15,7 +16,7 @@ Cilindro::~Cilindro()
 }
 void Cilindro::dibuja(){
 
-	gluCylinder(_c, _rtop, _rbase, _h, 30, 30);
+	gluCylinder(obj, _rtop, _rbase, _h, _sli, _sta);
 
 
 }

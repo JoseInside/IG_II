@@ -60,9 +60,6 @@
     <ClCompile Include="Rueda.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Cara.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="VerticeNormal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

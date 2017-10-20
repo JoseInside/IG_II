@@ -6,7 +6,7 @@
 class PV3D
 {
 public:
-	PV3D(GLfloat x, GLdouble y, GLfloat z, int pv);
+	PV3D(GLfloat x, GLfloat y, GLfloat z, int pv);
 	~PV3D();
 
 public:

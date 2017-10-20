@@ -4,7 +4,7 @@
 class Cara
 {
 public:
-	Cara(int nV, VerticeNormal** vN);
+	Cara(int nV, VerticeNormal** vN) : numVertices(nV), arrayVN(vN){};
 	~Cara();
 
 	int getNumeroVertices() { return numVertices; }
