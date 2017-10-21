@@ -10,3 +10,8 @@ Objeto3D::Objeto3D()
 Objeto3D::~Objeto3D()
 {
 }
+
+void Objeto3D::setColor(GLfloat x, GLfloat y, GLfloat z) {
+	
+	color = new PV3D(x, y, z, 0);
+}

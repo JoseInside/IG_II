@@ -46,3 +46,10 @@ PV3D* PV3D::productoVectorial(PV3D* v){
 
 	return pVectorial;
 }
+
+void PV3D::setPoints(GLfloat new_x, GLfloat new_y, GLfloat new_z) {
+	x = new_x;
+	y = new_y;
+	z = new_z;
+
+}

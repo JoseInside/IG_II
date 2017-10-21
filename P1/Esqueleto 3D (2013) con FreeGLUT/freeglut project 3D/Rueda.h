@@ -7,5 +7,7 @@ class Rueda : public ObjetoCompuesto
 public:
 	Rueda();
 	virtual ~Rueda();
+
+	//void dibuja();
 };
 

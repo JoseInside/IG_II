@@ -2,13 +2,15 @@
 #include "ObjetoCuadrico.h"
 class Esfera : public ObjetoCuadrico
 {
-private:
-	GLUquadric* _e;
-	GLfloat _r;
+
 public:
-	Esfera(GLUquadric* e, GLfloat r);
+	Esfera(GLfloat r, GLfloat sli, GLfloat sta);
 	~Esfera();
 
 	void dibuja();
+
+protected:
+
+	GLfloat _r, _sli, _sta;
 };
 

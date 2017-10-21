@@ -12,9 +12,9 @@ public:
 	Arbol(tipo t);
 	~Arbol();
 
-	void dibuja();
-
-private:
+protected:
 	tipo _t;
+
+	void creaArbol();
 };
 

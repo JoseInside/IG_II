@@ -4,8 +4,11 @@
 
 #include <GL/freeglut.h>
 #include <GL/glut.h>
-
 #include <iostream>
+
+#include "Coche.h"
+#include "Arbol.h"
+
 using namespace std;
 
 // Freeglut parameters
@@ -14,6 +17,8 @@ using namespace std;
 
 //VARIABLES
 GLUquadricObj *obj;
+Objeto3D* coche;
+Objeto3D* arbol;
 
 // Viewport size
 int WIDTH= 500, HEIGHT= 500;
@@ -36,6 +41,8 @@ void buildSceneObjects() {
 
 	rotRuedas = 0.0f;
 	obj = gluNewQuadric();
+	coche = new Coche();
+	arbol = new Arbol(Arbol::ALAMO);
 }
 
 void initGL() {	 		 
@@ -245,9 +252,12 @@ void display(void) {
 		 		
 		// Drawing the scene	 		 
 		glColor3f(1.0, 1.0, 1.0);
-		//dibujaArbol(2);
-		dibujaCoche();
 		//gluSphere(6, 50, 60); //Sphere: radius=6, meridians=50, parallels=60
+		//dibujaArbol(2);
+		//dibujaCoche();
+		//coche->dibuja();
+		arbol->dibuja();
+		
 	glPopMatrix();
  
 	glFlush();

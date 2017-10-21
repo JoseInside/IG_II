@@ -1,11 +1,12 @@
 #include "Disco.h"
 
 
-Disco::Disco(GLUquadric* d, GLfloat iR, GLfloat oR)
+Disco::Disco(GLfloat iR, GLfloat oR, GLfloat sli, GLfloat sta)
 {
-	_d = d;
 	_iR = iR;
 	_oR = oR;
+	_sli = sli;
+	_sta = sta;
 }
 
 
@@ -14,5 +15,5 @@ Disco::~Disco()
 }
 void Disco::dibuja(){
 
-	gluDisk(_d, _iR, _oR, 30, 30);
+	gluDisk(obj, _iR, _oR, _sli, _sta);
 }

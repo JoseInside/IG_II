@@ -1,7 +1,7 @@
 #include "Cilindro.h"
 
 
-Cilindro::Cilindro(GLfloat rtop, GLfloat rbase, GLfloat h, GLfloat sli, GLfloat sta)
+Cilindro::Cilindro(GLfloat rtop, GLfloat rbase, GLfloat h, GLfloat sli, GLfloat sta) : ObjetoCuadrico()
 {
 	_rtop = rtop;
 	_rbase = rbase;
@@ -14,9 +14,13 @@ Cilindro::Cilindro(GLfloat rtop, GLfloat rbase, GLfloat h, GLfloat sli, GLfloat 
 Cilindro::~Cilindro()
 {
 }
+
 void Cilindro::dibuja(){
-
+	
+	glPushMatrix();
+	glMultMatrixf(this->matriz->getM());
+	glColor3f(this->color->getX(), this->color->getY(), this->color->getZ());
 	gluCylinder(obj, _rtop, _rbase, _h, _sli, _sta);
-
+	glPopMatrix();
 
 }

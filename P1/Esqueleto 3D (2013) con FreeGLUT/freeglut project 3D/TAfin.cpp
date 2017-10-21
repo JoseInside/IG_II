@@ -50,3 +50,13 @@ void TAfin::rota(PV3D* v, GLdouble angulo)
 	glPopMatrix();
 	TAfin::postmultiplica(m1);
 }
+
+/*void TAfin::colorea(PV3D* color) {
+
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
+	glLoadIdentity();
+	glColor3f(color->getX(), color->getY(), color->getZ());
+	glPopMatrix();
+
+}*/

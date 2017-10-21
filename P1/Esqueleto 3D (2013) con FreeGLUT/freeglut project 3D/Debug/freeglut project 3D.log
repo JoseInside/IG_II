@@ -1,9 +1,2 @@
-﻿Build started 20/10/2017 13:53:01.
-     1>Project "C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\freeglut project 3D\freeglut project 3D.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         freeglut project 3D.vcxproj -> C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\Debug\freeglut project 3D.exe
-     1>Done Building Project "C:\hlocal\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\freeglut project 3D\freeglut project 3D.vcxproj" (Build target(s)).
-
-Build succeeded.
-
-Time Elapsed 00:00:00.04
+﻿  freeglut project 3D.vcxproj -> C:\Users\Skullatt\Desktop\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\Debug\freeglut project 3D.exe
+  freeglut project 3D.vcxproj -> C:\Users\Skullatt\Desktop\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\Debug\freeglut project 3D.pdb (Full PDB)

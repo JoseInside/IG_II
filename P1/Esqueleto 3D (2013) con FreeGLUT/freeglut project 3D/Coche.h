@@ -7,6 +7,7 @@ public:
 	~Coche();
 
 protected:
+
 	void creaCoche();
 };
 

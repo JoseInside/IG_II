@@ -16,6 +16,7 @@ void ObjetoCompuesto::introduceObjeto(Objeto3D* obj) {
 	hijos[numHijos] = obj;
 	numHijos++;
 }
+
 void ObjetoCompuesto::dibuja() {
 	
 	glMatrixMode(GL_MODELVIEW);

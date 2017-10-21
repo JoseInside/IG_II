@@ -3,10 +3,9 @@
 class Disco: public ObjetoCuadrico
 {
 private:
-	GLfloat _iR, _oR;
-	GLUquadric* _d;
+	GLfloat _iR, _oR, _sli, _sta;
 public:
-	Disco(GLUquadric* d, GLfloat iR, GLfloat oR);
+	Disco(GLfloat iR, GLfloat oR, GLfloat sli, GLfloat sta);
 	~Disco();
 
 	void dibuja();

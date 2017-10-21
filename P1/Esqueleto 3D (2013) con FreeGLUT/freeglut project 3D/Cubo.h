@@ -1,6 +1,7 @@
 #pragma once
-#include "Objeto3D.h"
-class Cubo: public Objeto3D
+#include "Malla.h"
+#include "ObjetoCuadrico.h"
+class Cubo: public Malla
 {
 
 public:

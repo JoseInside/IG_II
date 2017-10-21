@@ -9,6 +9,7 @@ public:
 
 	virtual void dibuja() = 0;
 
+	void setColor(GLfloat x, GLfloat y, GLfloat z);
 	TAfin* matriz;
 
 protected:
