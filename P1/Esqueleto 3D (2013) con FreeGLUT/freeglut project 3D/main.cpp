@@ -255,8 +255,8 @@ void display(void) {
 		//gluSphere(6, 50, 60); //Sphere: radius=6, meridians=50, parallels=60
 		//dibujaArbol(2);
 		//dibujaCoche();
-		//coche->dibuja();
-		arbol->dibuja();
+		coche->dibuja();
+		//arbol->dibuja();
 		
 	glPopMatrix();
  

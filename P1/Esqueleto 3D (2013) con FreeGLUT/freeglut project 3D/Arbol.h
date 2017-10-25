@@ -9,12 +9,12 @@ class Arbol: public ObjetoCompuesto
 public:
 	enum tipo { ABETO, ROBLE, PINO, ALAMO };
 
-	Arbol(tipo t);
+	Arbol(tipo t, PV3D* v, GLfloat h, GLfloat tam);
 	~Arbol();
 
 protected:
 	tipo _t;
-
-	void creaArbol();
+	GLfloat _h, _tam;
+	void creaArbol(PV3D v);
 };
 

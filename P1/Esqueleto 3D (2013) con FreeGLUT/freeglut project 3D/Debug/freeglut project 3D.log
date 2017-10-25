@@ -1,2 +1,21 @@
-﻿  freeglut project 3D.vcxproj -> C:\Users\Skullatt\Desktop\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\Debug\freeglut project 3D.exe
-  freeglut project 3D.vcxproj -> C:\Users\Skullatt\Desktop\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\Debug\freeglut project 3D.pdb (Full PDB)
+﻿  Coche.cpp
+c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\coche.cpp(22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\coche.cpp(26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\coche.cpp(29): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\coche.cpp(33): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\coche.cpp(37): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\coche.cpp(41): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+  Bosque.cpp
+c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\bosque.cpp(20): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\bosque.cpp(26): error C2446: '==': no conversion from 'PV3D *' to 'GLfloat *'
+  c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\bosque.cpp(26): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\bosque.cpp(30): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\bosque.cpp(37): warning C4244: '=': conversion from 'int' to 'GLfloat', possible loss of data
+  Arbol.cpp
+  Generating Code...
+  Compiling...
+  main.cpp
+c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\main.cpp(45): error C2664: 'Arbol::Arbol(const Arbol &)': cannot convert argument 1 from 'Arbol::tipo' to 'const Arbol &'
+  c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\main.cpp(45): note: Reason: cannot convert from 'Arbol::tipo' to 'const Arbol'
+  c:\hlocal\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\main.cpp(45): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  Generating Code...

@@ -12,28 +12,34 @@ Coche::Coche()
 	//PV3D v(0, 5.5, 0, 0);
 	//hijos[0]->matriz->traslada(&v);
 
-	PV3D v1(0.8, -0.5, 1.4, 0);
+	PV3D v1(0, 1.5, 0, 0);
 	PV3D rot(0, 1, 0, 0);
+	
+	//CHASIS
+	hijos[0]->matriz->traslada(&v1);
 
+	//RUEDAS
+	v1.setPoints(0.8, 0.5, 1.4);
 	hijos[1]->matriz->traslada(&v1);
 	hijos[1]->matriz->rota(&rot, 180);
 
-	PV3D v2(0.8, -0.5, -1.4, 0);
-	hijos[2]->matriz->traslada(&v2);
+	v1.setPoints(0.8, 0.5, -1.4);
+	hijos[2]->matriz->traslada(&v1);
 
-	PV3D v3(-0.8, -0.5, 1.4, 0);
-	hijos[3]->matriz->traslada(&v3);
+	v1.setPoints(-0.8, 0.5, 1.4);
+	hijos[3]->matriz->traslada(&v1);
 	hijos[3]->matriz->rota(&rot, 180);
 
-	PV3D v4(-0.8, -0.5, -1.4, 0);
-	hijos[4]->matriz->traslada(&v4);
+	v1.setPoints(-0.8, 0.5, -1.4);
+	hijos[4]->matriz->traslada(&v1);
 
-	PV3D v5(1.0, 0, -0.6, 0);
-	hijos[5]->matriz->traslada(&v5);
+	//FAROS
+	v1.setPoints(1.0, 1.5, -0.6);
+	hijos[5]->matriz->traslada(&v1);
 	hijos[5]->matriz->rota(&rot, 90);
 	
-	PV3D v6(1.0, 0, 0.6, 0);
-	hijos[6]->matriz->traslada(&v6);
+	v1.setPoints(1.0, 1.5, 0.6);
+	hijos[6]->matriz->traslada(&v1);
 	hijos[6]->matriz->rota(&rot, 90);
 }
 
@@ -64,7 +70,7 @@ void Coche::creaCoche()
 {
 	//Primero creamos el chasis
 	this->introduceObjeto(new Cubo(2));
-
+	hijos[0]->setColor(1.000f, 0.000f, 1.000f);
 	//Después añadimos las 4 ruedas
 	for (int i = 0; i < 4; i++)
 		this->introduceObjeto(new Rueda());
@@ -75,4 +81,6 @@ void Coche::creaCoche()
 		//Valores random, hay que ajustar
 		this->introduceObjeto(new Cilindro(0.25f, 0.25f, 0.4f, 30, 30));
 	}
+	hijos[5]->setColor(0.000f, 1.000f, 0.000f);
+	hijos[6]->setColor(0.000f, 1.000f, 0.000f);
 }
