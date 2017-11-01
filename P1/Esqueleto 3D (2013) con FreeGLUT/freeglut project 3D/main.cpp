@@ -8,6 +8,7 @@
 
 #include "Coche.h"
 #include "Arbol.h"
+#include "Escena.h"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ using namespace std;
 GLUquadricObj *obj;
 Objeto3D* coche;
 Objeto3D* arbol;
+Escena* escena;
 
 // Viewport size
 int WIDTH= 500, HEIGHT= 500;
@@ -41,8 +43,9 @@ void buildSceneObjects() {
 
 	rotRuedas = 0.0f;
 	obj = gluNewQuadric();
-	coche = new Coche();
-	arbol = new Arbol(Arbol::ALAMO);
+	//coche = new Coche();
+	//arbol = new Arbol(Arbol::ALAMO);
+	escena = new Escena();
 }
 
 void initGL() {	 		 
@@ -255,9 +258,10 @@ void display(void) {
 		//gluSphere(6, 50, 60); //Sphere: radius=6, meridians=50, parallels=60
 		//dibujaArbol(2);
 		//dibujaCoche();
-		coche->dibuja();
+		//coche->dibuja();
 		//arbol->dibuja();
-		
+		escena->dibuja();
+
 	glPopMatrix();
  
 	glFlush();
@@ -300,14 +304,22 @@ void key(unsigned char key, int x, int y){
 			//Freeglut's sentence for stopping glut's main loop (*)
 			glutLeaveMainLoop (); 
 			break;		 
-		case 'a': angX=angX+5; break;
+		/*case 'a': angX=angX+5; break;
 		case 'z': angX=angX-5; break; 
 		case 's': angY=angY+5; break;
 		case 'x': angY=angY-5; break;
 		case 'd': angZ=angZ+5; break;
-		case 'c': angZ=angZ-5; break;  
-		case 'f': rotRuedas+= 5; break;
-		case 'v': rotRuedas-= 5; break;
+		case 'c': angZ=angZ-5; break;  */
+
+		case 'x': angX = angX + 5; break;
+		case 'y': angY = angY + 5; break;
+		case 'z': angZ = angZ + 5; break;
+
+		case 'a': escena->movCoche(Escena::LEFT); break;
+		case 'd': escena->movCoche(Escena::RIGHT); break;
+		case 'w': escena->movCoche(Escena::FOWARD); break;
+		case 's': escena->movCoche(Escena::BACKWARDS); break;
+
 		default:
 			need_redisplay = false;
 			break;

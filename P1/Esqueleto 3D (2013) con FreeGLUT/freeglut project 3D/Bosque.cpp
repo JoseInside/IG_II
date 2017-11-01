@@ -23,7 +23,7 @@ void Bosque::creaBosque() {
 		//bool encontrado = false;
 		int cont = 0;
 
-		while (cont < numHijos) {
+		/*while (cont < numHijos) {
 			if (hijos[cont]->matriz->getM() == newPos->matriz->getM()) { //FALTA ESTO
 				//buscar rango de nuevo
 				randX = rand() % 21 - 10;	// rango -10, 10
@@ -34,7 +34,7 @@ void Bosque::creaBosque() {
 			else {
 				cont++;
 			}
-		}
+		}*/
 
 		int prob = rand() % 4;
 		Arbol::tipo tipo;
