@@ -1,5 +1,5 @@
 #include "Bosque.h"
-
+#include <time.h>
 
 Bosque::Bosque() : ObjetoCompuesto()
 {
@@ -14,6 +14,11 @@ Bosque::~Bosque()
 
 
 void Bosque::creaBosque() {
+
+	srand(time(0));
+	
+	//FÓRMULA MÁXIMO Y MÍNIMO:
+	///rand()%(max-min + 1) + min;
 
 	for (int i = 0; i < 4; ++i) {
 		int randX = rand() % 21 - 10;	// rango -10, 10
@@ -36,23 +41,27 @@ void Bosque::creaBosque() {
 			}
 		}*/
 
-		int prob = rand() % 4;
+		int prob = rand() % 4 + 1;
 		Arbol::tipo tipo;
 		GLfloat _h, _tam;
-		_h = rand() % 5 + 2;	//ALTURA DEL TRONCO 
-		_tam = rand() % 5 + 1;	//TAMAÑO DE LA COPA 
+		_h = rand() % 3 + 3;	//ALTURA DEL TRONCO (4 - 3)
+		//_tam = rand() % 4 + 1;	//TAMAÑO DE LA COPA 
 		switch (prob) {
 		case 1:
 			tipo = Arbol::ABETO;
+			_tam = rand() % 3 + 2;	//TAMAÑO DE LA COPA (CILINDRO) (4 - 2)
 			break;
 		case 2:
 			tipo = Arbol::ROBLE;
+			_tam = rand() % 2 + 1;	//TAMAÑO DE LA COPA (ESFERA) (2 - 1)
 			break;
 		case 3:
 			tipo = Arbol::PINO;
+			_tam = rand() % 3 + 2;	//TAMAÑO DE LA COPA (CILINDRO) (4 - 2)
 			break;
 		case 4:
 			tipo = Arbol::ALAMO;
+			_tam = rand() % 2 + 1;	//TAMAÑO DE LA COPA (ESFERA) (2 - 1)
 			break;
 		}
 		//probabilidad 0.25 type arbol

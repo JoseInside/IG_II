@@ -5,8 +5,8 @@
 
 Escena::Escena() : ObjetoCompuesto()
 {
-	//bosque = new Bosque();
 	coche = new Coche();
+	bosque = new Bosque();
 
 	creaEscena();
 }
@@ -19,7 +19,7 @@ Escena::~Escena()
 void Escena::creaEscena() {
 
 	this->introduceObjeto(coche);
-	//this->introduceObjeto(bosque);
+	this->introduceObjeto(bosque);
 }
 
 void Escena::movCoche(movType type) {

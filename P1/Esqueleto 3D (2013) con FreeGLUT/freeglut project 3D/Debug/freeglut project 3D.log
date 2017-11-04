@@ -1,3 +1,15 @@
-﻿  main.cpp
+﻿  Bosque.cpp
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\bosque.cpp(18): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\bosque.cpp(26): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\bosque.cpp(47): warning C4244: '=': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\bosque.cpp(52): warning C4244: '=': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\bosque.cpp(56): warning C4244: '=': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\bosque.cpp(60): warning C4244: '=': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\bosque.cpp(64): warning C4244: '=': conversion from 'int' to 'GLfloat', possible loss of data
+  Arbol.cpp
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\arbol.cpp(57): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\arbol.cpp(60): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+c:\users\skullatt\desktop\ig_ii\p1\esqueleto 3d (2013) con freeglut\freeglut project 3d\arbol.cpp(64): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+  Generating Code...
   freeglut project 3D.vcxproj -> C:\Users\Skullatt\Desktop\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\Debug\freeglut project 3D.exe
   freeglut project 3D.vcxproj -> C:\Users\Skullatt\Desktop\IG_II\P1\Esqueleto 3D (2013) con FreeGLUT\Debug\freeglut project 3D.pdb (Full PDB)
