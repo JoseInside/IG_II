@@ -87,144 +87,18 @@ void initGL() {
 
 
 //MÉTODOS
-void dibujaArbol(int tipo) {
+void camaraUpdate() {
 
-	glPushMatrix();
-	glRotatef(-90.0f, 1, 0, 0);
-	glScalef(0.5f, 0.5f, 0.5f);
-	gluCylinder(obj, 1, 0.5, 10, 30, 30);
-
-	glPopMatrix();
-
-	switch (tipo) {
-		//ABETOS
-	case (1) :
-		glPushMatrix();
-		glTranslatef(0.0f, 4.0f, 0.0f);
-		glScalef(0.4f, 0.4f, 0.4f);
-		glRotatef(-90.0f, 1, 0, 0);
-		gluCylinder(obj, 3, 0, 10, 30, 30);
-		
-		glPopMatrix();
-		break;
-		//PINOS
-	case(2):
-		glPushMatrix();
-		glTranslatef(0.0f, 4.0f, 0.0f);
-		glScalef(0.4f, 0.4f, 0.4f);
-		glRotatef(-90.0f, 1, 0, 0);
-		gluCylinder(obj, 3, 0, 10, 30, 30);
-		glRotatef(90.0f, 1, 0, 0);
-
-		glTranslatef(0.0f, 4.0f, 0.0f);
-		glRotatef(-90.0f, 1, 0, 0);
-		gluCylinder(obj, 3, 0, 10, 30, 30);
-		glRotatef(90.0f, 1, 0, 0);
-		glPopMatrix();
-		break;
-		//ROBLES
-	case(3):
-		glPushMatrix();
-		glTranslatef(0.0f, 5.0f, 0.0f);
-		glScalef(0.5f, 0.5f, 0.5f);
-		gluSphere(obj, 3, 30, 30);
-		glPopMatrix();
-		break;
-		//ÁLAMOS
-	case(4):
-		glPushMatrix();
-		glTranslatef(-0.6f, 5.0f, 0.6f);
-		glScalef(0.5f, 0.5f, 0.5f);
-		gluSphere(obj, 3, 30, 30);
-		glTranslatef(0.6f, -5.0f, -0.6f);
-		glTranslatef(2.0f, 5.0f, -2.0f);
-		gluSphere(obj, 2.5, 30, 30);
-		glPopMatrix();
-		break;
-	}
-}
-
-void dibujaCoche(){
-
-	glPushMatrix();
-
-	glTranslatef(rotRuedas/20, 0.0f, 0.0f);
-	glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
-	glPushMatrix();
-
-	glColor3d(255, 0, 255);
-	glutSolidCube(2);
-	
-
-	//FARO DERECHA
-	glScalef(0.3f, 0.3f, 0.4f);
-	glTranslatef(1.5f, 0.0f, 2.5f);
-	glColor3d(0, 255, 0);
-	gluCylinder(obj, 1, 1, 1, 30, 30);
-	glTranslatef(-1.5f, 0.0f, -2.5f);
-
-	//FARO IZQUIERDA
-	glTranslatef(-1.5f, 0.0f, 2.5f);
-	glColor3d(0, 255, 0);
-	gluCylinder(obj, 1, 1, 1, 30, 30);
-	glTranslatef(1.5f, 0.0f, -2.5f);
-	
-	glPopMatrix();
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	eyeX = escena->getCoche()->matriz->m[9];
+	eyeZ = escena->getCoche()->matriz->m[14];
+	lookX = escena->getCoche()->matriz->m[12];
+	lookZ = escena->getCoche()->matriz->m[14];
+	gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
 
 
-	//RUEDAS (REF. COCHE MIRANDO EN VISTA FRONTAL)
-	
-	glPushMatrix();
-	
-	glScalef(0.5f, 0.5f, 0.5f);
-	glColor3d(0, 0, 0);
 
-	//IZQ FRONTAL
-	glTranslatef(-3.0f, -1.5f, 1.3f);
-	glRotatef(rotRuedas, 1.0f, 0.0f, 0.0f);
-	glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
-	gluCylinder(obj, 1, 1, 1, 30, 30);
-	gluDisk(obj, 0, 1, 30, 30);
-	glRotatef(-90.0f, 0.0f, 1.0f, 0.0f);
-	glRotatef(-rotRuedas, 1.0f, 0.0f, 0.0f);
-	glTranslatef(3.0f, 1.5f, -1.3f);
-	
-	//DER FRONTAL
-	glTranslatef(3.0f, -1.5f, 1.3f);
-	glRotatef(rotRuedas, 1.0f, 0.0f, 0.0f);
-	glRotatef(-90.0f, 0.0f, 1.0f, 0.0f);
-	gluCylinder(obj, 1, 1, 1, 30, 30);
-	gluDisk(obj, 0, 1, 30, 30);
-	//glutSolidCube(1);	TESTING
-	glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
-	glRotatef(-rotRuedas, 1.0f, 0.0f, 0.0f);
-	glTranslatef(-3.0f, 1.5f, -1.3f);
-
-	//DER TRASERO
-	glTranslatef(3.0f, -1.5f, -1.3f);
-	glRotatef(rotRuedas, 1.0f, 0.0f, 0.0f);
-	glRotatef(-90.0f, 0.0f, 1.0f, 0.0f);
-	gluCylinder(obj, 1, 1, 1, 30, 30);
-	gluDisk(obj, 0, 1, 30, 30);
-	glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
-	glRotatef(-rotRuedas, 1.0f, 0.0f, 0.0f);
-	glTranslatef(-3.0f, 1.5f, 1.3f);
-
-	//IZQ TRASERO
-	glTranslatef(-3.0f, -1.5f, -1.3f);
-	glRotatef(rotRuedas, 1.0f, 0.0f, 0.0f);
-	glRotatef(90.0f, 0.0f, 1.0f, 0.0f);
-	gluCylinder(obj, 1, 1, 1, 30, 30);
-	gluDisk(obj, 0, 1, 30, 30);
-	glRotatef(-90.0f, 0.0f, 1.0f, 0.0f);
-	glRotatef(-rotRuedas, 1.0f, 0.0f, 0.0f);
-	glTranslatef(3.0f, 1.5f, 1.3f);
-
-	glPopMatrix();
-
-	
-
-	glPopMatrix();
 }
 
 void display(void) {
@@ -315,10 +189,10 @@ void key(unsigned char key, int x, int y){
 		case 'y': angY = angY + 5; break;
 		case 'z': angZ = angZ + 5; break;
 
-		case 'a': escena->movCoche(Escena::LEFT); break;
-		case 'd': escena->movCoche(Escena::RIGHT); break;
-		case 'w': escena->movCoche(Escena::FOWARD); break;
-		case 's': escena->movCoche(Escena::BACKWARDS); break;
+		case 'a': escena->movCoche(Escena::LEFT); camaraUpdate(); break;
+		case 'd': escena->movCoche(Escena::RIGHT); camaraUpdate(); break;
+		case 'w': escena->movCoche(Escena::FOWARD); camaraUpdate(); break;
+		case 's': escena->movCoche(Escena::BACKWARDS); camaraUpdate(); break;
 
 		default:
 			need_redisplay = false;

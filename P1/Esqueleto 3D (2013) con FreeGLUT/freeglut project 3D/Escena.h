@@ -7,7 +7,8 @@ class Escena : public ObjetoCompuesto
 
 public:
 	enum movType {FOWARD, BACKWARDS, LEFT, RIGHT};
-	
+	Objeto3D* getCoche();
+
 	Escena();
 	~Escena();
 

@@ -132,3 +132,7 @@ void Escena::controlJuego() {
 		}
 	}
 }
+Objeto3D* Escena::getCoche() {
+
+	return hijos[0];
+}
