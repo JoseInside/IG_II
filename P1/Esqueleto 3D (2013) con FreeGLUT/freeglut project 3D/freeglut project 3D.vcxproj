@@ -68,7 +68,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Arbol.cpp" />
-    <ClCompile Include="Bosque.cpp" />
     <ClCompile Include="Cilindro.cpp" />
     <ClCompile Include="Coche.cpp" />
     <ClCompile Include="Cubo.cpp" />
@@ -88,7 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Arbol.h" />
-    <ClInclude Include="Bosque.h" />
     <ClInclude Include="Cara.h" />
     <ClInclude Include="Cilindro.h" />
     <ClInclude Include="Coche.h" />

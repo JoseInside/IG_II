@@ -3,6 +3,7 @@
 
 Objeto3D::Objeto3D()
 {
+	active = true;
 	matriz = new TAfin();
 }
 

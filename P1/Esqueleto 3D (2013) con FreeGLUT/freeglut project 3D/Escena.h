@@ -12,11 +12,17 @@ public:
 	~Escena();
 
 	void movCoche(movType type);
-
+	void controlJuego();
+	//bool getCollision() { return collision; };
+	//bool isEndGame() { return gameOver; };
 protected:
-	Objeto3D *coche, *bosque;
+	//Bosque *bosque;
+	Objeto3D *coche;
 	const GLfloat angRot = 20.0f;
+	bool collision, gameOver;
+
 	void creaEscena();
+	void creaBosque();
 
 };
 

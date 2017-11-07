@@ -3,12 +3,12 @@
 class ObjetoCompuesto: public Objeto3D {
 
 protected:
-	Objeto3D** hijos;
 	int numHijos;
 public:
 	ObjetoCompuesto();
 	~ObjetoCompuesto();
 
+	Objeto3D** hijos;
 	void dibuja();
 	void introduceObjeto(Objeto3D* objeto);
 };

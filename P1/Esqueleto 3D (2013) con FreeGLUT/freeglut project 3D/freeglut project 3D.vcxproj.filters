@@ -63,9 +63,6 @@
     <ClCompile Include="VerticeNormal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Bosque.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Escena.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -117,9 +114,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VerticeNormal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Bosque.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Escena.h">

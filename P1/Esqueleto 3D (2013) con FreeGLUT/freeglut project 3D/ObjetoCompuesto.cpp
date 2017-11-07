@@ -10,6 +10,9 @@ ObjetoCompuesto::ObjetoCompuesto()
 
 ObjetoCompuesto::~ObjetoCompuesto()
 {
+	for (int i = 0; i < numHijos; ++i)
+		delete hijos[i];
+
 }
 
 void ObjetoCompuesto::introduceObjeto(Objeto3D* obj) {
@@ -19,10 +22,12 @@ void ObjetoCompuesto::introduceObjeto(Objeto3D* obj) {
 
 void ObjetoCompuesto::dibuja() {
 	
-	glMatrixMode(GL_MODELVIEW);
-	glPushMatrix();
-	glMultMatrixf(this->matriz->getM());
-	for (int i = 0; i<numHijos; i++)
-		hijos[i]->dibuja();
-	glPopMatrix();
+	if (this->isActive()) {
+		glMatrixMode(GL_MODELVIEW);
+		glPushMatrix();
+		glMultMatrixf(this->matriz->getM());
+		for (int i = 0; i < numHijos; i++)
+			hijos[i]->dibuja();
+		glPopMatrix();
+	}
 }

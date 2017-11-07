@@ -11,9 +11,10 @@ public:
 
 	void setColor(GLfloat x, GLfloat y, GLfloat z);
 	TAfin* matriz;
-
+	bool isActive() { return active; };
+	void changeActive() { active = !active; };
 protected:
-	
+	bool active;
 	PV3D* color;
 	
 };
