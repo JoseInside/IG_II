@@ -12,6 +12,17 @@
 
 using namespace std;
 
+
+/*
+
+		PRACTICA 1 - MODELO JERÁRQUICO 
+
+		INTEGRANTES: 
+		
+		JOSE MARÍA MONREAL GONZÁLEZ
+		ROBERTO ALCÁZAR MORALES
+
+*/
 // Freeglut parameters
 // Flag telling us to keep processing events
 // bool continue_in_main_loop= true; //(**)
@@ -48,6 +59,27 @@ void buildSceneObjects() {
 	escena = new Escena();
 }
 
+
+//MÉTODOS
+void camaraUpdate() {
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	PV3D aux = { 0, 100, 0, 0 };
+	aux = escena->hijos[0]->matriz->getPos();
+	eyeX = 25 + aux.getX();
+	//eyeY = 100;
+	eyeZ = 25 + aux.getZ();
+
+	lookX = aux.getX();
+	lookZ = aux.getZ();
+	lookY = aux.getY();
+	gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
+
+
+
+}
+
 void initGL() {	 		 
 	glClearColor(0.6f,0.7f,0.8f,1.0);
       
@@ -73,7 +105,8 @@ void initGL() {
 	// Camera set up
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
+	//gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
+	camaraUpdate();
 
 	// Frustum set up
     glMatrixMode(GL_PROJECTION);
@@ -85,26 +118,6 @@ void initGL() {
     glViewport(0, 0, WIDTH, HEIGHT);  	
  }
 
-
-//MÉTODOS
-void camaraUpdate() {
-
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-	PV3D aux = { 0, 100, 0, 0 };
-	aux = escena->hijos[0]->matriz->getPos();
-	eyeX = 25 + aux.getX();
-	//eyeY = 100;
-	eyeZ = 25 + aux.getZ();
-
-	lookX = aux.getX();
-	lookZ = aux.getZ();
-	lookY = aux.getY();
-	gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
-
-
-
-}
 
 void display(void) {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);  

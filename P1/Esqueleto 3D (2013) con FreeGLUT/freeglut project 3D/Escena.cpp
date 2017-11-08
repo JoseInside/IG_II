@@ -73,8 +73,6 @@ void Escena::creaBosque() {
 		numArboles++;
 	}
 
-	for (int j = 0; j < numHijos; ++j)
-		std::cout << this->hijos[j]->matriz->getPos().getX() << " " << this->hijos[j]->matriz->getPos().getZ() << "\n";
 }
 
 void Escena::movCoche(movType type) {
@@ -128,7 +126,7 @@ void Escena::controlJuego() {
 					this->hijos[cont]->changeActive();
 					--numArboles;
 					cont = 0;
-					std::cout << "Collision! \n";
+					//std::cout << "Collision! \n";
 				}
 			}
 			//std::cout << numHijos << "\n";
