@@ -10,8 +10,8 @@ ObjetoCompuesto::ObjetoCompuesto()
 
 ObjetoCompuesto::~ObjetoCompuesto()
 {
-	for (int i = 0; i < numHijos; ++i)
-		delete hijos[i];
+	/*for (int i = 0; i < numHijos; ++i)
+		delete hijos[i];*/
 
 }
 

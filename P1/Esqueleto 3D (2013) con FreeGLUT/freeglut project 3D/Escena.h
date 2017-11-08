@@ -19,6 +19,7 @@ public:
 protected:
 	//Bosque *bosque;
 	Objeto3D *coche;
+	int numArboles;
 	const GLfloat angRot = 20.0f;
 	bool collision, gameOver;
 

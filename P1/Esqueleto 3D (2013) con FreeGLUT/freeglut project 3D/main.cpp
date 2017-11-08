@@ -91,10 +91,15 @@ void camaraUpdate() {
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	eyeX = escena->getCoche()->matriz->m[9];
-	eyeZ = escena->getCoche()->matriz->m[14];
-	lookX = escena->getCoche()->matriz->m[12];
-	lookZ = escena->getCoche()->matriz->m[14];
+	PV3D aux = { 0, 100, 0, 0 };
+	aux = escena->hijos[0]->matriz->getPos();
+	eyeX = 25 + aux.getX();
+	//eyeY = 100;
+	eyeZ = 25 + aux.getZ();
+
+	lookX = aux.getX();
+	lookZ = aux.getZ();
+	lookY = aux.getY();
 	gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
 
 

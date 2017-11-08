@@ -11,7 +11,9 @@ Escena::Escena() : ObjetoCompuesto()
 	//bosque = new Bosque();
 	collision = false;
 	gameOver = false;
+	numArboles = 0;
 	creaEscena();
+
 }
 
 
@@ -68,7 +70,11 @@ void Escena::creaBosque() {
 
 		this->introduceObjeto(new Arbol(tipo, newPos, _h, _tam));
 		this->hijos[i]->matriz->traslada(newPos);
+		numArboles++;
 	}
+
+	for (int j = 0; j < numHijos; ++j)
+		std::cout << this->hijos[j]->matriz->getPos().getX() << " " << this->hijos[j]->matriz->getPos().getZ() << "\n";
 }
 
 void Escena::movCoche(movType type) {
@@ -103,7 +109,7 @@ void Escena::controlJuego() {
 	
 	int cont = 1;
 	
-	if (numHijos == 1) {
+	if (numArboles == 0) {
 		gameOver = true;
 	}
 	else {
@@ -111,11 +117,7 @@ void Escena::controlJuego() {
 		//COMPARAR POSICIÓN DEL COCHE CON CADA ÁRBOL CALCULANDO SU DISTANCIA
 		//DISTANCIA = sqrt((x1 - y1)*(x1 - y1 ) + (x2 - y2)*(x2 - y2));
 		//pow(x1 - x2, 2) + pow(y1 - y2, 2)
-		
-		
-		//DEBUG
-		/*std::cout << sqrt((pow(hijos[cont]->matriz->getPos().getX() - hijos[0]->matriz->getPos().getX(), 2) +
-			pow(hijos[cont]->matriz->getPos().getZ() - hijos[0]->matriz->getPos().getZ(), 2))) << "\n";*/
+		collision = false;
 
 		while (cont < numHijos && !collision) {
 			if (hijos[cont]->isActive()) {
@@ -124,10 +126,12 @@ void Escena::controlJuego() {
 					
 					collision = true;
 					this->hijos[cont]->changeActive();
-					--numHijos;
+					--numArboles;
+					cont = 0;
 					std::cout << "Collision! \n";
 				}
 			}
+			//std::cout << numHijos << "\n";
 			cont++;
 		}
 	}

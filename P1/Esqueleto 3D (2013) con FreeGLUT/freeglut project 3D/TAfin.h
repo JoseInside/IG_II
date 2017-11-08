@@ -15,7 +15,7 @@ public:
 	PV3D getPos() { return PV3D(m[12], m[13], m[14], 0); };
 	GLfloat *getM() { return m; }
 
-	GLfloat* m;
 protected:
+	GLfloat* m;
 };
 

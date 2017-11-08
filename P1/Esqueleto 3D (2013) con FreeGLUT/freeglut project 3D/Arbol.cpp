@@ -29,14 +29,14 @@ void Arbol::creaArbol(PV3D v) {
 	case ABETO:
 		this->introduceObjeto(new Cilindro(0.0f, 1.2f, _tam, 30, 30));	//UN CONO	//tam = 3.8f
 		hijos[1]->setColor(0.000f, 0.392f, 0.000f);						//COLOR: VERDE OSCURO
-		v.setPoints(0, 7, 0);
+		v.setPoints(0, _h+2, 0);
 		hijos[1]->matriz->traslada(&v);
 		hijos[1]->matriz->rota(&rot, 90);
 		break;
 	case ROBLE:
 		this->introduceObjeto(new Esfera(_tam, 30, 30));				//UNA ESFERA	//tam = 1.5f
 		hijos[1]->setColor(0.000f, 0.392f, 0.000f);						//COLOR: VERDE OSCURO
-		v.setPoints(0, 5, 0);
+		v.setPoints(0, _h, 0);
 		hijos[1]->matriz->traslada(&v);
 		hijos[1]->matriz->rota(&rot, 90);
 		break;
@@ -45,10 +45,10 @@ void Arbol::creaArbol(PV3D v) {
 		this->introduceObjeto(new Cilindro(0.0f, 1.2f, _tam, 30, 30));
 		hijos[1]->setColor(0.000f, 0.392f, 0.000f);						//COLOR: VERDE OSCURO
 		hijos[2]->setColor(0.000f, 0.392f, 0.000f);						//COLOR: VERDE OSCURO
-		v.setPoints(0, 7, 0);
+		v.setPoints(0, _h+2, 0);
 		hijos[1]->matriz->traslada(&v);
 		hijos[1]->matriz->rota(&rot, 90);
-		v.setPoints(0, 8, 0);
+		v.setPoints(0, _h+3, 0);
 		hijos[2]->matriz->traslada(&v);
 		hijos[2]->matriz->rota(&rot, 90);
 		break;
@@ -58,11 +58,11 @@ void Arbol::creaArbol(PV3D v) {
 		hijos[1]->setColor(0.000f, 0.392f, 0.000f);						//COLOR: VERDE OSCURO
 		hijos[2]->setColor(0.000f, 0.392f, 0.000f);						//COLOR: VERDE OSCURO
 		//v.setPoints(v.getX() - 0.5, 5, v.getZ() + 0.5);
-		v.setPoints(-0.5, 5, 0.5);
+		v.setPoints(-0.5, _h, 0.5);
 		hijos[1]->matriz->traslada(&v);
 		hijos[1]->matriz->rota(&rot, 90);
 		//v.setPoints(v.getX() + 0.5, 5, v.getZ() - 0.5);
-		v.setPoints(0.5, 5, -0.5);
+		v.setPoints(0.5, _h, -0.5);
 		hijos[2]->matriz->traslada(&v);
 		hijos[2]->matriz->rota(&rot, 90);
 		break;
