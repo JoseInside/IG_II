@@ -31,46 +31,52 @@ void Escena::creaEscena() {
 void Escena::creaBosque() {
 	
 	srand(time(0));
-
+	int contArbol = 1;	//Num¡rboles - 1
+	
 	//F”RMULA M¡XIMO Y MÕNIMO:
 	///rand()%(max-min + 1) + min;
 
-	for (int i = 1; i <= 4; ++i) {
-		int randX = rand() % 21 - 10;	// rango -10, 10
-		int randZ = rand() % 21 - 10;	// rango -10, 10
-		PV3D* newPos = new PV3D(randX, 0, randZ, 0);
+	for (int randX = -10; randX < 10; randX++)
+	{
+		for (int randZ = -10; randZ < 10; randZ++)
+		{
+			//probabilidad 0.10
+			if ((rand() % (99 - 0 + 1))  <= 10){
+				PV3D* newPos = new PV3D(randX, 0, randZ, 0);
 
-		//bool encontrado = false;
-		int cont = 0;
+				int cont = 0;
 
-		//probabilidad 0.25 type arbol
-		int prob = rand() % 4 + 1;
-		Arbol::tipo tipo;
-		GLfloat _h, _tam;
-		_h = rand() % 3 + 3;	//ALTURA DEL TRONCO (4 - 3)
-								//_tam = rand() % 4 + 1;	//TAMA—O DE LA COPA 
-		switch (prob) {
-		case 1:
-			tipo = Arbol::ABETO;
-			_tam = rand() % 3 + 2;	//TAMA—O DE LA COPA (CILINDRO) (4 - 2)
-			break;
-		case 2:
-			tipo = Arbol::ROBLE;
-			_tam = rand() % 2 + 1;	//TAMA—O DE LA COPA (ESFERA) (2 - 1)
-			break;
-		case 3:
-			tipo = Arbol::PINO;
-			_tam = rand() % 3 + 2;	//TAMA—O DE LA COPA (CILINDRO) (4 - 2)
-			break;
-		case 4:
-			tipo = Arbol::ALAMO;
-			_tam = rand() % 2 + 1;	//TAMA—O DE LA COPA (ESFERA) (2 - 1)
-			break;
+				//probabilidad 0.25 type arbol
+				int prob = rand() % 4 + 1;
+				Arbol::tipo tipo;
+				GLfloat _h, _tam;
+				_h = rand() % 3 + 3;	//ALTURA DEL TRONCO (4 - 3)
+				//_tam = rand() % 4 + 1;	//TAMA—O DE LA COPA 
+				switch (prob) {
+				case 1:
+					tipo = Arbol::ABETO;
+					_tam = rand() % 3 + 2;	//TAMA—O DE LA COPA (CILINDRO) (4 - 2)
+					break;
+				case 2:
+					tipo = Arbol::ROBLE;
+					_tam = rand() % 2 + 1;	//TAMA—O DE LA COPA (ESFERA) (2 - 1)
+					break;
+				case 3:
+					tipo = Arbol::PINO;
+					_tam = rand() % 3 + 2;	//TAMA—O DE LA COPA (CILINDRO) (4 - 2)
+					break;
+				case 4:
+					tipo = Arbol::ALAMO;
+					_tam = rand() % 2 + 1;	//TAMA—O DE LA COPA (ESFERA) (2 - 1)
+					break;
+				}
+
+				this->introduceObjeto(new Arbol(tipo, newPos, _h, _tam));
+				this->hijos[contArbol]->matriz->traslada(newPos);
+				contArbol++;
+				numArboles++;
+			}
 		}
-
-		this->introduceObjeto(new Arbol(tipo, newPos, _h, _tam));
-		this->hijos[i]->matriz->traslada(newPos);
-		numArboles++;
 	}
 
 }

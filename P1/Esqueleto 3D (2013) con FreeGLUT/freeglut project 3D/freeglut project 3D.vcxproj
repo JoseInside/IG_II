@@ -70,6 +70,8 @@
     <ClCompile Include="Arbol.cpp" />
     <ClCompile Include="Cilindro.cpp" />
     <ClCompile Include="Coche.cpp" />
+    <ClCompile Include="CopaDoble.cpp" />
+    <ClCompile Include="CopaSimple.cpp" />
     <ClCompile Include="Cubo.cpp" />
     <ClCompile Include="Disco.cpp" />
     <ClCompile Include="DiscoParcial.cpp" />
@@ -81,8 +83,6 @@
     <ClCompile Include="ObjetoCompuesto.cpp" />
     <ClCompile Include="ObjetoCuadrico.cpp" />
     <ClCompile Include="PV3D.cpp" />
-    <ClCompile Include="QuadTree.cpp" />
-    <ClCompile Include="QuadTreeNode.cpp" />
     <ClCompile Include="Rueda.cpp" />
     <ClCompile Include="TAfin.cpp" />
     <ClCompile Include="VerticeNormal.cpp" />
@@ -92,6 +92,8 @@
     <ClInclude Include="Cara.h" />
     <ClInclude Include="Cilindro.h" />
     <ClInclude Include="Coche.h" />
+    <ClInclude Include="CopaDoble.h" />
+    <ClInclude Include="CopaSimple.h" />
     <ClInclude Include="Cubo.h" />
     <ClInclude Include="Disco.h" />
     <ClInclude Include="DiscoParcial.h" />
@@ -102,8 +104,6 @@
     <ClInclude Include="ObjetoCompuesto.h" />
     <ClInclude Include="ObjetoCuadrico.h" />
     <ClInclude Include="PV3D.h" />
-    <ClInclude Include="QuadTree.h" />
-    <ClInclude Include="QuadTreeNode.h" />
     <ClInclude Include="Rueda.h" />
     <ClInclude Include="TAfin.h" />
     <ClInclude Include="VerticeNormal.h" />

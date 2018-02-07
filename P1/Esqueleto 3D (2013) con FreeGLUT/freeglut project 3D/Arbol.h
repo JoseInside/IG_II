@@ -1,8 +1,6 @@
 #pragma once
 #include "ObjetoCompuesto.h"
-#include "ObjetoCuadrico.h"
-#include "Esfera.h"
-#include "Cilindro.h"
+
 
 class Arbol: public ObjetoCompuesto
 {

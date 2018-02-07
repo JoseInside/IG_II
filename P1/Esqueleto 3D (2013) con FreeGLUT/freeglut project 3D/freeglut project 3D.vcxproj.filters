@@ -66,10 +66,10 @@
     <ClCompile Include="Escena.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="QuadTreeNode.cpp">
+    <ClCompile Include="CopaSimple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="QuadTree.cpp">
+    <ClCompile Include="CopaDoble.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -125,10 +125,10 @@
     <ClInclude Include="Escena.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="QuadTreeNode.h">
+    <ClInclude Include="CopaSimple.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="QuadTree.h">
+    <ClInclude Include="CopaDoble.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

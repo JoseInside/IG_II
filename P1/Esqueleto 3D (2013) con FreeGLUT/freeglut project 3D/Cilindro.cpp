@@ -1,7 +1,7 @@
 #include "Cilindro.h"
 
 
-Cilindro::Cilindro(GLfloat rtop, GLfloat rbase, GLfloat h, GLfloat sli, GLfloat sta) : ObjetoCuadrico()
+Cilindro::Cilindro(GLfloat rtop, GLfloat rbase, GLfloat h, GLfloat sli, GLfloat sta) 
 {
 	_rtop = rtop;
 	_rbase = rbase;

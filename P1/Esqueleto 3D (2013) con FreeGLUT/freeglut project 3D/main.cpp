@@ -37,12 +37,13 @@ Escena* escena;
 int WIDTH= 500, HEIGHT= 500;
 
 // Viewing frustum parameters
-GLdouble xRight=10, xLeft=-xRight, yTop=10, yBot=-yTop, N=1, F=1000;
+//ESTO ES LO QUE CAMBIA LA VISTA PERSPECTIVA CON RESPECTO A LA CÁMARA CENITAL 
+GLdouble xRight=1, xLeft=-xRight, yTop=1, yBot=-yTop, N=1, F=1000;
 
 // Camera parameters
-GLdouble eyeX=100.0, eyeY=100.0, eyeZ=100.0;
+GLdouble eyeX=0.0, eyeY=10.0, eyeZ=0.0;
 GLdouble lookX=0.0, lookY=0.0, lookZ=0.0;
-GLdouble upX=0, upY=1, upZ=0;
+GLdouble upX=-1, upY=0, upZ=0;
 
 // Scene variables
 GLfloat angX, angY, angZ, rotRuedas; 
@@ -65,18 +66,17 @@ void camaraUpdate() {
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	PV3D aux = { 0, 100, 0, 0 };
+	PV3D aux = { 0, 0, 0, 0 };
 	aux = escena->hijos[0]->matriz->getPos();
-	eyeX = 25 + aux.getX();
-	//eyeY = 100;
-	eyeZ = 25 + aux.getZ();
+	
+	//CENITAL
+	eyeX = aux.getX();
+	eyeZ = aux.getZ();
 
 	lookX = aux.getX();
 	lookZ = aux.getZ();
-	lookY = aux.getY();
+
 	gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
-
-
 
 }
 
@@ -105,8 +105,7 @@ void initGL() {
 	// Camera set up
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	//gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
-	camaraUpdate();
+	gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
 
 	// Frustum set up
     glMatrixMode(GL_PROJECTION);
@@ -185,7 +184,8 @@ void resize(int newWidth, int newHeight) {
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();   
-	glOrtho(xLeft, xRight, yBot, yTop, N, F);
+	//glOrtho(xLeft, xRight, yBot, yTop, N, F);
+	glFrustum(xLeft, xRight, yBot, yTop, N, F);
 }
 
 void key(unsigned char key, int x, int y){
@@ -217,8 +217,9 @@ void key(unsigned char key, int x, int y){
 			break;
 	}
 
-	if (need_redisplay)
+	if (need_redisplay){
 		glutPostRedisplay();
+	}
 }
 
 int main(int argc, char *argv[]){
